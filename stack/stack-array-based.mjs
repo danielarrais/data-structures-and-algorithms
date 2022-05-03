@@ -3,8 +3,8 @@ class Stack {
         this.items = [];
     }
 
-    push(...elements) {
-        this.items.push(elements);
+    push(element) {
+        this.items.push(element);
     }
 
     pop() {
@@ -12,9 +12,7 @@ class Stack {
     }
 
     peek() {
-        const size = this.size();
-        const lastItemIndex = size === 0 ? 0 : size - 1;
-        return this.items[lastItemIndex];
+        return this.items[this.size() - 1];
     }
 
     isEmpty() {
